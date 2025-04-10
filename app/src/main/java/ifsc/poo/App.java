@@ -7,6 +7,22 @@ public class App {
 
     public static void main(String[] args){
 
+        System.out.println("\n\n");
 
+        Lampada led = new Lampada();
+        Lampada alogenica = new Lampada(false);
+
+        System.out.println("Lampada de led está : " + ((led.verEstado())? "Ligada":"Desligada"));
+        led.desligar();
+        System.out.println("Após tocar no interruptor ela está: "+ ((led.verEstado())? "Ligada":"Desligada") );
+
+        System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
+        if (alogenica.verEstado()) {
+            alogenica.desligar();
+        } else {
+            alogenica.ligar();
+        }
+        System.out.println("Após tocar no interrupor ela está : " + ((alogenica.verEstado())? "Ligada":"Desligada"));
+        System.out.println("\n\n");
     }
 }
