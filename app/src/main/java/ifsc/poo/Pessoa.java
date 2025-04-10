@@ -8,9 +8,11 @@ public class Pessoa {
         this.nome = nome;
         this.idade = idade;
     }
+
     public String getNome() {
         return this.nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -18,6 +20,7 @@ public class Pessoa {
     public int getIdade() {
         return this.idade;
     }
+
     public void setIdade(int idade) {
         if (idade <= 0) {
             System.out.println("Idade impossivel, tente novamente");

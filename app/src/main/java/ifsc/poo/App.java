@@ -26,7 +26,9 @@ public class App {
         System.out.println("\n\n");
     }
 
-    Pessoa pessoa1 = new Pessoa("Alice", 22);
-    Pessoa pessoa2 = new Pessoa("Bruno", 25);
+    Pessoa pessoa0 = new Pessoa("Alice", 22);
+    Pessoa pessoa1 = new Pessoa("Bruno", 25);
+    Pessoa pessoa2 = new Pessoa("Carlos", 25);
+
 
 }
