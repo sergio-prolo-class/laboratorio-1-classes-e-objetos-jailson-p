@@ -25,4 +25,8 @@ public class App {
         System.out.println("Após tocar no interrupor ela está : " + ((alogenica.verEstado())? "Ligada":"Desligada"));
         System.out.println("\n\n");
     }
+
+    Pessoa pessoa1 = new Pessoa("Alice", 22);
+    Pessoa pessoa2 = new Pessoa("Bruno", 25);
+
 }

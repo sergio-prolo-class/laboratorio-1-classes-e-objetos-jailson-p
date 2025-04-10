@@ -19,7 +19,16 @@ public class Pessoa {
         return this.idade;
     }
     public void setIdade(int idade) {
+        if (idade <= 0) {
+            System.out.println("Idade impossivel, tente novamente");
+            return;
+        }
+        if (this.idade < idade) {this.nome.toString();}
         this.idade = idade;
     }
 
+    @Override
+    public String toString() {
+        return this.nome + ", feliz aniversário! " ;
+    }
 }
