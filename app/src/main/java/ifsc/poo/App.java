@@ -7,28 +7,25 @@ public class App {
 
     public static void main(String[] args){
 
-        System.out.println("\n\n");
+        System.out.println("\n");
 
+        //item 1.3(a) - Readme.md - criar duas instâncias de Lampada
         Lampada led = new Lampada();
-        Lampada alogenica = new Lampada(false);
+        Lampada alogenica = new Lampada();
 
+        //itens 1.3(b)e(c) - Readme.md - ligar uma instância e desligar a outra e imprimir o estado
+        led.ligar();
         System.out.println("Lampada de led está : " + ((led.verEstado())? "Ligada":"Desligada"));
-        led.desligar();
-        System.out.println("Após tocar no interruptor ela está: "+ ((led.verEstado())? "Ligada":"Desligada") );
-
+        alogenica.desligar();
         System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
-        if (alogenica.verEstado()) {
-            alogenica.desligar();
-        } else {
-            alogenica.ligar();
-        }
-        System.out.println("Após tocar no interrupor ela está : " + ((alogenica.verEstado())? "Ligada":"Desligada"));
         System.out.println("\n\n");
+
+
+        Pessoa pessoa0 = new Pessoa("Alice", 22);
+        Pessoa pessoa1 = new Pessoa("Bruno", 25);
+        pessoa1.setIdade(26);
+        pessoa1.setIdade(27);
+        pessoa1.setIdade(28);
+
     }
-
-    Pessoa pessoa0 = new Pessoa("Alice", 22);
-    Pessoa pessoa1 = new Pessoa("Bruno", 25);
-    Pessoa pessoa2 = new Pessoa("Carlos", 25);
-
-
 }

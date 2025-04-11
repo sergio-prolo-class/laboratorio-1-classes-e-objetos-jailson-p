@@ -26,7 +26,9 @@ public class Pessoa {
             System.out.println("Idade impossivel, tente novamente");
             return;
         }
-        if (this.idade < idade) {this.nome.toString();}
+        if (this.idade < idade) {
+            System.out.println(toString());
+        }
         this.idade = idade;
     }
 
