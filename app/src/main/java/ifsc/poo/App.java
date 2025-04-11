@@ -18,14 +18,31 @@ public class App {
         System.out.println("Lampada de led está : " + ((led.verEstado())? "Ligada":"Desligada"));
         alogenica.desligar();
         System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
-        System.out.println("\n\n");
+        System.out.println();
 
+        //Item 2.3(a) - Readme.md. Criar duas pessoas, nessas condições
+        Pessoa alice = new Pessoa("Alice", 22);
+        Pessoa bruno = new Pessoa("Bruno", 25);
+        System.out.println();
 
-        Pessoa pessoa0 = new Pessoa("Alice", 22);
-        Pessoa pessoa1 = new Pessoa("Bruno", 25);
-        pessoa1.setIdade(26);
-        pessoa1.setIdade(27);
-        pessoa1.setIdade(28);
+        //Item 2.3(b) - Readme.md. Comemorar 3x felicidades ao Bruno
+        bruno.felizAniversario();
+        bruno.felizAniversario();
+        bruno.felizAniversario();
+        System.out.println();
+
+        //Item 2.3(c) - Readme.md. Imprimir a idade das duas pessoas
+        System.out.println("Alice tem " + alice.getIdade() + " anos.");
+        System.out.println("Bruno tem " + bruno.getIdade() + " anos.\n");
+
+        //Item 2.3(d) - Readme.md. Teste de regra para idade < 0
+        alice.setIdade(-44);
+        System.out.println();
+
+        //Item 2.3(e) - Readme.md Teste set de nome vazio
+        bruno.setNome("");
+        System.out.println(bruno.getNome());
+
 
     }
 }

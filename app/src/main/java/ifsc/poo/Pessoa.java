@@ -1,35 +1,41 @@
 package ifsc.poo;
 
 public class Pessoa {
+
+    //Item 2.1 - Readme.md
     private String nome;
     private int idade = 0;
 
+    //construtor
     public Pessoa(String nome, int idade) {
-        this.nome = nome;
-        this.idade = idade;
+        setNome(nome);
+        setIdade(idade);
     }
 
+    //Item 2.2 - Readme.md
+    public void setNome(String nome) {
+        if(!nome.isEmpty()) this.nome = nome;
+        else System.out.println("Nome do " + this.nome +" não pode estar vazio para alteração e continua o mesmo.");
+    }
+    //Item 2.2 - Readme.md
     public String getNome() {
         return this.nome;
     }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    //Item 2.2 - Readme.md
+    public void setIdade(int idade) {
+        if (idade < 0) {
+            System.out.println("Ajustar a idade de " + idade + " é incoerente para " + this.nome + " continuando com: " + this.getIdade() + " anos.");
+            return;
+        }
+        this.idade = idade;
     }
-
+    //Item 2.2 - Readme.md
     public int getIdade() {
         return this.idade;
     }
-
-    public void setIdade(int idade) {
-        if (idade <= 0) {
-            System.out.println("Idade impossivel, tente novamente");
-            return;
-        }
-        if (this.idade < idade) {
-            System.out.println(toString());
-        }
-        this.idade = idade;
+    //Item 2.2 - Readme.md
+    public void felizAniversario(){
+        System.out.println(toString());
     }
 
     @Override
