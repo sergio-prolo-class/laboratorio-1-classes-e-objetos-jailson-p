@@ -3,8 +3,8 @@ package ifsc.poo;
 public class Pessoa {
 
     //Item 2.1 - Readme.md
-    private String nome;
-    private int idade = 0;
+    private String nome ;
+    private int idade ;
 
     //construtor
     public Pessoa(String nome, int idade) {
@@ -35,7 +35,7 @@ public class Pessoa {
     }
     //Item 2.2 - Readme.md
     public void felizAniversario(){
-        System.out.println(toString());
+        System.out.println(this);
     }
 
     @Override

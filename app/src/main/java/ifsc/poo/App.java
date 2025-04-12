@@ -32,8 +32,8 @@ public class App {
         System.out.println();
 
         //Item 2.3(c) - Readme.md. Imprimir a idade das duas pessoas
-        System.out.println("Alice tem " + alice.getIdade() + " anos.");
-        System.out.println("Bruno tem " + bruno.getIdade() + " anos.\n");
+        System.out.println(alice.getNome() + " tem " + alice.getIdade() + " anos.");
+        System.out.println(bruno.getNome() + " tem " + bruno.getIdade() + " anos.\n");
 
         //Item 2.3(d) - Readme.md. Teste de regra para idade < 0
         alice.setIdade(-44);
@@ -42,7 +42,6 @@ public class App {
         //Item 2.3(e) - Readme.md Teste set de nome vazio
         bruno.setNome("");
         System.out.println(bruno.getNome());
-
 
     }
 }
