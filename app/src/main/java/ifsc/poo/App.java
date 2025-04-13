@@ -43,5 +43,11 @@ public class App {
         bruno.setNome("");
         System.out.println(bruno.getNome());
 
+        //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
+        Retangulo quadrilatero = new Retangulo(5,4);
+
+        System.out.println("\nPara um retângulo de " + quadrilatero.getLargura() + " larg. com " + quadrilatero.getAltura()
+                +" de altura a área deste retângulo é "+ quadrilatero.getArea() + " e o perímetro é " + quadrilatero.getPerimetro() + "\n");
+
     }
 }

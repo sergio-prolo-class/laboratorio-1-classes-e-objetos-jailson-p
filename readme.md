@@ -42,17 +42,17 @@
 - Modele um retângulo em plano cartesiano bidimensional, que possua formas de calcular sua
 área e perímetro. Inclua:  
 ### 3.1 Atributos:
-- [ ] (float) largura  
-- [ ] (float) altura  
+- [x] (float) largura  
+- [x] (float) altura  
 ### 3.2 Métodos:  
-- [ ] (void) setLargura(float largura)  
-- [ ] (void) setAltura(float altura)  
-- [ ] (float) getArea()   
-- [ ] (float) getPerimetro()  
+- [x] (void) setLargura(float largura)  
+- [x] (void) setAltura(float altura)  
+- [x] (float) getArea()   
+- [x] (float) getPerimetro()  
 
 ### 3.3 Na aplicação principal (App.java), teste sua classe da seguinte forma:  
-- [ ] (a) Crie um retângulo com 5 de largura e 4 de altura  
-- [ ] (b) Sua área é 20? Seu perímetro é 18?  
+- [x] (a) Crie um retângulo com 5 de largura e 4 de altura  
+- [x] (b) Sua área é 20? Seu perímetro é 18?  
 - [ ] (c) Crie um vetor de 10 retângulos gerados aleatoriamente  
 - [ ] (d) Imprima a maior razão área sobre perímetro da lista  
 
