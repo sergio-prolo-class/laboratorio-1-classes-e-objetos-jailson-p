@@ -3,6 +3,10 @@
  */
 package ifsc.poo;
 
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Vector;
+
 public class App {
 
     public static void main(String[] args){
@@ -46,8 +50,18 @@ public class App {
         //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
         Retangulo quadrilatero = new Retangulo(5,4);
 
-        System.out.println("\nPara um retângulo de " + quadrilatero.getLargura() + " larg. com " + quadrilatero.getAltura()
-                +" de altura a área deste retângulo é "+ quadrilatero.getArea() + " e o perímetro é " + quadrilatero.getPerimetro() + "\n");
+        System.out.println(quadrilatero.toString());
+
+        Vector<Retangulo> vetRet = new Vector<Retangulo>();
+        for (int i = 0; i < 10; i++) {
+            Random rand = new Random();
+            float largura = rand.nextFloat(1,20);
+            float altura = rand.nextFloat(1,20);
+            vetRet.add(new Retangulo(largura, altura));
+        }
+        for (Retangulo retangulo : vetRet) {
+            System.out.println(retangulo.toString());
+        }
 
     }
 }

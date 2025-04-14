@@ -33,4 +33,11 @@ public class Retangulo {
     public float getAltura(){
         return this.altura;
     }
+
+    @Override
+    public String toString() {
+
+        return "\nPara um retângulo de " + this.getLargura() + " larg. com " + this.getAltura()
+                +" de altura a área deste retângulo é "+ this.getArea() + " e o perímetro é " + this.getPerimetro() + "\n";
+    }
 }
