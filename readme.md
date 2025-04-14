@@ -59,22 +59,23 @@
 ## 4. Relógio  
 - Modele um relógio que apresenta os valores de hora, minuto e segundo (formato HH:MM:SS). Inclua:  
 ### 4.1 Atributos:  
-- [ ] (byte) hora  
-- [ ] (byte) minuto
-- [ ] (byte) segundo  
+- [x] (byte) hora  
+- [x] (byte) minuto
+- [x] (byte) segundo  
 
 ### 4.2 Métodos:
-- [ ] (void) ajustaHora(byte hora, byte minuto, byte segundo)  
-- [ ] (String) getHora()  
-- [ ] (void) avancaHora()  
-- [ ] (void) avancaMinuto()  
-- [ ] (void) avancaSegundo()  
+- [x] (void) ajustaHora(byte hora, byte minuto, byte segundo)  
+- [x] (String) getHora()  
+- [x] (void) avancaHora()  
+- [x] (void) avancaMinuto()  
+- [x] (void) avancaSegundo()  
 ### 4.3 Na aplicação principal (App.java), teste sua classe da seguinte forma:
-- [ ] (a) Crie um relógio que marca 14:58:32  
-- [ ] (b) Avance dois minutos. Qual valor ele marca agora?  
-- [ ] (c) Altere o relógio para marcar 23:59:59  
-- [ ] (d) Avance um segundo. Qual valor ele marca agora?  
-- [ ] (e) Como eu poderia mudar o formato da marcação de horas? Por exemplo, se eu quiser que    o relógio mostre ‘11pm 30m 45s’ ao invés de ‘23:30:45’. Qual(ais) mudança(s) deveria(m) ser feita(s) na classe Relogio?  
+- [x] (a) Crie um relógio que marca 14:58:32  
+- [x] (b) Avance dois minutos. Qual valor ele marca agora? --> 15:0:32   
+- [x] (c) Altere o relógio para marcar 23:59:59  
+- [x] (d) Avance um segundo. Qual valor ele marca agora? --> 00:00:00  
+- [x] (e) Como eu poderia mudar o formato da marcação de horas? Por exemplo, se eu quiser que o relógio mostre ‘11pm 30m 45s’ ao invés de ‘23:30:45’. Qual(ais) mudança(s) deveria(m) ser feita(s) na classe Relogio?   
+   * criei um método para resolver esse impasse com recursão do getHora() para getHora12(bolean h12)
 ## 5. Produto  
    Modele um produto que possui nome, preço e uma taxa de desconto. Inclua:
 ### 5.1 Atributos:  
