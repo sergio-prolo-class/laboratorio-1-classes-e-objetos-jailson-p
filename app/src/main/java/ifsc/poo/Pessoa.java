@@ -17,10 +17,12 @@ public class Pessoa {
         if(!nome.isEmpty()) this.nome = nome;
         else System.out.println("Nome do " + this.nome +" não pode estar vazio para alteração e continua o mesmo.");
     }
+
     //Item 2.2 - Readme.md
     public String getNome() {
         return this.nome;
     }
+
     //Item 2.2 - Readme.md
     public void setIdade(int idade) {
         if (idade < 0) {
@@ -29,10 +31,12 @@ public class Pessoa {
         }
         this.idade = idade;
     }
+
     //Item 2.2 - Readme.md
     public int getIdade() {
         return this.idade;
     }
+
     //Item 2.2 - Readme.md
     public void felizAniversario(){
         System.out.println(this);

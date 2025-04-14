@@ -17,10 +17,12 @@ public class Lampada {
     public void ligar(){
         this.lampada = true;
     }
+
     //Item 1.2 - Readme.md. Método que permite manter o esdado "desligado" da lâmpada
     public void desligar(){
         this.lampada = false;
     }
+
     //Item 1.2 - Readme.md. Método que devolve o estado da lâmpada
     public boolean verEstado(){
         return this.lampada;

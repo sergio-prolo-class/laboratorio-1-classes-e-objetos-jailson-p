@@ -59,15 +59,15 @@ public class App {
         for (int i = 0; i < 10; i++) {
             Random rand = new Random();
             float largura = rand.nextFloat(1,20);
-            float altura = rand.nextFloat(1,20);
+            float altura  = rand.nextFloat(1,20);
             vetRet.add(new Retangulo(largura, altura));
         }
-        
+
         //Item 3.3(d) - Readme.md - Imprimir a maior razão A/P deste vetor,,,, nessa eu me superei
         //abaixo, usa o método compareTo que este usa a razao A/P como parâmetro para re-organizar as posições crescentes no Vector
         Collections.sort(vetRet);
         //ultimo vector é o de maior razão
-        System.out.println(vetRet.get(9));
+        System.out.println(vetRet.get(vetRet.capacity()-1));
         //for(Retangulo a : vetRet){System.out.println(a);}
 
 
