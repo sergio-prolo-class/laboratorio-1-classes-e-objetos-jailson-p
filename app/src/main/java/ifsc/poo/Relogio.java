@@ -17,6 +17,17 @@ public class Relogio {
     //Item 4.2 - Readme.me - criar metodo (String) getHora()
     public String getHora()     {return this.getHora12(false);}
 
+    //Item 4.2 - Readme.me - criar metodo (void) avancaHora()
+    public void avancaHora()    {this.hora++;}
+
+    //Item 4.2 - Readme.me - criar metodo (void) avancaMinuto()
+    public void avancaMinuto()  {this.minuto++; }
+
+    //Item 4.2 - Readme.me - criar metodo (void) avancaSegundo()
+    public void avancaSegundo() {this.segundo++;}
+
+    //Métodos auxiliares abaixo
+
     //Item 4.2(e) - Readme.me - Resolução para os formatos XXpm XXm XXs e XX:XX:XX
     public String getHora12(boolean h12){
         borrowTime();
@@ -31,15 +42,7 @@ public class Relogio {
         return h + m + s;
     }
 
-    //Item 4.2 - Readme.me - criar metodo (void) avancaHora()
-    public void avancaHora()    {this.hora++;}
-
-    //Item 4.2 - Readme.me - criar metodo (void) avancaMinuto()
-    public void avancaMinuto()  {this.minuto++; }
-
-    //Item 4.2 - Readme.me - criar metodo (void) avancaSegundo()
-    public void avancaSegundo() {this.segundo++;}
-
+    //transfere o excedente para o campo mais significativo
     private void borrowTime(){
         while (this.segundo > (byte) 59){
             avancaMinuto();
@@ -54,6 +57,7 @@ public class Relogio {
         }
     }
 
+    //Ajusta o texto para dois dígitos
     private String doisDigitos(byte unidade){
         String  unidadet = String.valueOf(unidade);
         if(unidadet.length() < 2) unidadet = "0" + unidadet;
