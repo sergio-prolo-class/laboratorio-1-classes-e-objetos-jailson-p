@@ -4,6 +4,7 @@
 package ifsc.poo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Vector;
 
@@ -50,8 +51,10 @@ public class App {
         //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
         Retangulo quadrilatero = new Retangulo(5,4);
 
+        //Item 3.3(b) - Readme.me - comprova que 5x4 tem área 20 e perimetro 18
         System.out.println(quadrilatero.toString());
 
+        //Item 3.3(c) - Readme.md - criar um vetor com 10 'Retangulo's aleatórios
         Vector<Retangulo> vetRet = new Vector<Retangulo>();
         for (int i = 0; i < 10; i++) {
             Random rand = new Random();
@@ -59,9 +62,14 @@ public class App {
             float altura = rand.nextFloat(1,20);
             vetRet.add(new Retangulo(largura, altura));
         }
-        for (Retangulo retangulo : vetRet) {
-            System.out.println(retangulo.toString());
-        }
+        
+        //Item 3.3(d) - Readme.md - Imprimir a maior razão A/P deste vetor,,,, nessa eu me superei
+        //abaixo, usa o método compareTo que este usa a razao A/P como parâmetro para re-organizar as posições crescentes no Vector
+        Collections.sort(vetRet);
+        //ultimo vector é o de maior razão
+        System.out.println(vetRet.get(9));
+        //for(Retangulo a : vetRet){System.out.println(a);}
+
 
     }
 }

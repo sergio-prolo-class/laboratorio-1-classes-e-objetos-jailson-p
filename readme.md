@@ -53,8 +53,8 @@
 ### 3.3 Na aplicação principal (App.java), teste sua classe da seguinte forma:  
 - [x] (a) Crie um retângulo com 5 de largura e 4 de altura  
 - [x] (b) Sua área é 20? Seu perímetro é 18?  
-- [ ] (c) Crie um vetor de 10 retângulos gerados aleatoriamente  
-- [ ] (d) Imprima a maior razão área sobre perímetro da lista  
+- [x] (c) Crie um vetor de 10 retângulos gerados aleatoriamente  
+- [x] (d) Imprima a maior razão área sobre perímetro da lista  
 
 ## 4. Relógio  
 - Modele um relógio que apresenta os valores de hora, minuto e segundo (formato HH:MM:SS). Inclua:  

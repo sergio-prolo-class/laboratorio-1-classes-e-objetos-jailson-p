@@ -1,6 +1,6 @@
 package ifsc.poo;
 
-public class Retangulo {
+public class Retangulo implements Comparable<Retangulo> {
 
     private float largura;
     private float altura;
@@ -34,10 +34,20 @@ public class Retangulo {
         return this.altura;
     }
 
+    //Método utilitário para uso interno para calcular A/P
+    private float getRazaoAreaSobrePerimetro(Retangulo a){ return a.getArea() / a.getPerimetro();}
+    //Método requisitado para uso com a classe Collections, um comparador para classe Retangulo entre A/P
+    public int compareTo(Retangulo outroRetangulo){
+        if      (getRazaoAreaSobrePerimetro(this) < getRazaoAreaSobrePerimetro(outroRetangulo))   {return -1;}
+        else if (getRazaoAreaSobrePerimetro(this) > getRazaoAreaSobrePerimetro(outroRetangulo))   {return 1;}
+        else                                                                                         {return 0;}
+    }
+
     @Override
     public String toString() {
 
-        return "\nPara um retângulo de " + this.getLargura() + " larg. com " + this.getAltura()
-                +" de altura a área deste retângulo é "+ this.getArea() + " e o perímetro é " + this.getPerimetro() + "\n";
+        return  "\nPara um retângulo com:\n" +
+                "Largura:"+ this.getLargura() + " e altura: " + this.getAltura()
+                +"\nArea: "+ this.getArea() + " e o perímetro é " + this.getPerimetro() + " e sua razão A/P é :" + this.getRazaoAreaSobrePerimetro(this) + "\n";
     }
 }
