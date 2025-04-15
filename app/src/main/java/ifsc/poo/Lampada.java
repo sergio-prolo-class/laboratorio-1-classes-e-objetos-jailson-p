@@ -5,9 +5,7 @@ public class Lampada {
     private boolean lampada ;
 
     //construtor
-    public Lampada(){
-        this.lampada = false;
-    }
+    public Lampada(){this.lampada = false;}
     //construtor com argumento
     public Lampada(boolean novoEstado){
         this.lampada = novoEstado;
@@ -27,5 +25,4 @@ public class Lampada {
     public boolean verEstado(){
         return this.lampada;
     }
-
 }

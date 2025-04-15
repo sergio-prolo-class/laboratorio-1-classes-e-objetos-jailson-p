@@ -38,12 +38,8 @@ public class Pessoa {
     }
 
     //Item 2.2 - Readme.md
-    public void felizAniversario(){
-        System.out.println(this);
-    }
+    public void felizAniversario(){System.out.println(this);}
 
     @Override
-    public String toString() {
-        return this.nome + ", feliz aniversário! " ;
-    }
+    public String toString() {return this.nome + ", feliz aniversário! " ;}
 }

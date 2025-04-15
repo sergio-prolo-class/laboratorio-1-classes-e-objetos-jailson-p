@@ -79,26 +79,26 @@
 ## 5. Produto  
    Modele um produto que possui nome, preço e uma taxa de desconto. Inclua:
 ### 5.1 Atributos:  
-- [ ]   (String) nome  
-- [ ]   (int) preco  
-- [ ]   (int) desconto  
+- [x]   (String) nome  
+- [x]   (int) preco  
+- [x]   (int) desconto  
 ### 5.2 Métodos:  
-- [ ]   (void) setNome(String nome)  
-- [ ]   (String) getNome()  
-- [ ]   (void) setPreco(int preco)  
-- [ ]   (float) getPreco()  
-- [ ]   (void) setDesconto(int desconto)  
-- [ ]   (int) getDesconto()  
+- [x]   (void) setNome(String nome)  
+- [x]   (String) getNome()  
+- [x]   (void) setPreco(int preco)  
+- [x]   (float) getPreco()  
+- [x]   (void) setDesconto(int desconto)  
+- [x]   (int) getDesconto()  
 ### 5.3 Na aplicação principal (App.java), teste sua classe da seguinte forma:  
-- [ ] (a) Crie dois produtos sem descontos: uma geladeira de 832 reais e um micro-ondas de 499
+- [x] (a) Crie dois produtos sem descontos: uma geladeira de 832 reais e um micro-ondas de 499
 reais.  
-- [ ] (b) Deu a louca no gerente! Ajuste a geladeira para ter 6% de desconto, e o micro-ondas para
+- [x] (b) Deu a louca no gerente! Ajuste a geladeira para ter 6% de desconto, e o micro-ondas para
    ter 12%.  
-- [ ] (c) Imprima na tela o novo preço de cada produto. A geladeira custa 782,08 reais? O
-   micro-ondas custa 439,12 reais?  
-- [ ] (d) Altere a classe Produto para incluir um novo método (String) anuncio(). Ele deve
+- [x] (c) Imprima na tela o novo preço de cada produto. A geladeira custa 782,08 reais? O
+   micro-ondas custa 439,12 reais? ---> os dois preços corretos  
+- [x] (d) Altere a classe Produto para incluir um novo método (String) anuncio(). Ele deve
    retornar um texto no estilo “Geladeira: de R$ 832,00 por APENAS R$ 782,08!"  
-- [ ] (e) Você acha que a modelagem desse produto é boa? Se não, onde você mudaria algo, e por
+- [x] (e) Você acha que a modelagem desse produto é boa? Se não, onde você mudaria algo, e por
    que? Faça um comentário no seu código fonte incluindo essa resposta.  
 ## 6. Livro  
    Modele um livro que possui título, autor, até dois gêneros literários, o número total de páginas,
