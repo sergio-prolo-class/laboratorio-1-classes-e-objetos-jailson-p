@@ -17,7 +17,7 @@ public class App {
         System.out.println("Lampada de led está : " + ((led.verEstado())? "Ligada":"Desligada"));
         alogenica.desligar();
         System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
-        System.out.println();
+        System.out.println("====================================================================");
 
         //Item 2.3(a) - Readme.md. Criar duas pessoas, nessas condições
         Pessoa alice = new Pessoa("Alice", 22);
@@ -37,6 +37,7 @@ public class App {
         //Item 2.3(e) - Readme.md Teste set de nome vazio
         bruno.setNome("");
         System.out.println(bruno.getNome());
+        System.out.println("====================================================================");
 
         //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
         Retangulo quadrilatero = new Retangulo(5,4);
@@ -56,6 +57,7 @@ public class App {
         //ultimo vector é o de maior razão
         System.out.println(vetRet.get(vetRet.capacity()-1));
         //for(Retangulo a : vetRet){System.out.println(a);}
+        System.out.println("====================================================================");
 
 
         //Item 4.3 - Readme.md - Relógio
@@ -73,7 +75,7 @@ public class App {
         //Item 4.3(d) - Readme.me - avançar um segundo de 23:59:59
         casio.avancaSegundo();
         System.out.println(casio.getHora());
-        System.out.println();
+        System.out.println("====================================================================");
 
         //Item 5.3(a) - Readme.md - Criar 2 produtos
         Produto produto1 = new Produto();
@@ -84,11 +86,65 @@ public class App {
         produto1.setDesconto(6);
         produto2.setDesconto(12);
         //Item 5.3(c) - Readme.md - Saída com o valor dos descontos;
-        float p1comDesconto = produto1.getPreco()-(produto1.getPreco()*produto1.getDesconto()/100.00f);
-        System.out.println(p1comDesconto);
-        float p2comDesconto = produto2.getPreco()-(produto2.getPreco()*produto2.getDesconto()/100.00f);
-        System.out.println(p2comDesconto);
+        System.out.println(produto1.getPreco()-(produto1.getPreco()*produto1.getDesconto()/100.00f));
+        System.out.println(produto2.getPreco()-(produto2.getPreco()*produto2.getDesconto()/100.00f));
         //Item 5.3(d) - Readme.md - Saída com o valor dos descontos por um Método anuncio();
-        System.out.println(produto1.anuncio());
+        System.out.println(produto1.anuncio());//tenho dúvidas de boa conduta nesse método, deveria ser feito no App ou no Produto?
+        System.out.println("====================================================================");
+
+        //Item 6.3(a) - Readme.md - Instanciar um Livro;
+        String  tituloESubTitulo = "O Senhor dos Anéis - A Sociedade do Anel",
+                autor = "J. R. R. Tolkien";
+        //constroí Livro myPrecious
+        Livro myPrecious = new Livro(tituloESubTitulo,autor, Livro.Generos.Fantasia,Livro.Generos.Aventura, 464);
+
+        //Adiciona os capítulos
+        App.addCapLivro(myPrecious);
+
+        App.lerPaginas(0,myPrecious);
+        //Ler silenciosamente até a pag 90
+        App.lerPaginas(90,myPrecious);
+        //Ler silenciosamente da pag 90 à 390, avançando 300 pags.
+        App.lerPaginas(300,myPrecious);
+        //Testando o limite de leitura
+        App.lerPaginas(100,myPrecious);
+        System.out.println("====================================================================");
+
+    }
+
+    //faz a leitura e localiza em qual capítulo se encontra
+    public static  void lerPaginas(int paginas, Livro livro){
+        for(int i = 1 ; i <= paginas ; i++){
+            if(!livro.avancarPagina()){
+                System.out.println("Não é possível avançar.");
+                break;
+            }
+        }
+        System.out.println("Pagina atual:" + livro.getPaginaAtual() + "\nCAP:" + livro.getCapAtual());
+    }
+    //adiciona todos os capítulos
+    public static void addCapLivro(Livro livro){
+        livro.addCapitulo("1 Uma Festa Muito Esperada",    "1");
+        livro.addCapitulo("2 A Sombra do Passado ",        "23");
+        livro.addCapitulo("3 Três é Demais",               "44");
+        livro.addCapitulo("4 Um Atalho para Cogumelos" ,   "66");
+        livro.addCapitulo("5 Uma Conspiração Desmascarada", "89");
+        livro.addCapitulo("6 A Floresta Velha",            "  110");
+        livro.addCapitulo("7 Em Casa de Tom Bombadil",     "131");
+        livro.addCapitulo("8 Névoa nas Colinas dos Túmulos"," 154");
+        livro.addCapitulo("9 No Pônei Empinado",           "176");
+        livro.addCapitulo("10 Passolargo",                 " 197");
+        livro.addCapitulo("11 Um Faca na Noite",           " 219");
+        livro.addCapitulo("12 Voo para o Vau",             " 240");
+        livro.addCapitulo("13 Muitos Encontros",           "261 ");
+        livro.addCapitulo("14 O Conselho de Elrond",       " 282");
+        livro.addCapitulo("15 O Anel Vai para o Sul",      " 301");
+        livro.addCapitulo("16 Uma Jornada no Escuro",      " 320");
+        livro.addCapitulo("17 A Ponte de Khazad-dûm",      " 341");
+        livro.addCapitulo("18 Lothlórien",                 " 361");
+        livro.addCapitulo("19 O Espelho de Galadriel",     " 383");
+        livro.addCapitulo("20 Adeus a Lórien",             " 403");
+        livro.addCapitulo("21 O Grande Rio",               " 423");
+        livro.addCapitulo("22 A Partida da Sociedade",     " 446");
     }
 }

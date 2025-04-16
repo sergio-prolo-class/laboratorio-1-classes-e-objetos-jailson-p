@@ -101,20 +101,27 @@ reais.
 - [x] (e) Você acha que a modelagem desse produto é boa? Se não, onde você mudaria algo, e por
    que? Faça um comentário no seu código fonte incluindo essa resposta.  
 ## 6. Livro  
-   Modele um livro que possui título, autor, até dois gêneros literários, o número total de páginas,
-   os títulos de cada capítulo e as páginas onde cada capítulo começa. Assuma que o livro pode
-   ter, no máximo, 30 capítulos. A lista de possíveis gêneros literários é: Fantasia, Aventura,
-   Romance, Mistério, Terror, Auto-ajuda e Pedagógico.  
-   Inclua todos os atributos e métodos necessários para representar o livro (getter e setter). O
-   livro também deve ter métodos para o usuário ler páginas do livro, bem como descobrir quantas
-   páginas do livro já foram lidas e qual é o capítulo atual de leitura.  
-   Na aplicação principal (App.java), teste sua classe da seguinte forma:  
-   (a) Crie um livro com as seguintes características:  
-   • Título: O Senhor dos Anéis - A Sociedade do Anel  
-   • Autor: J. R. R. Tolkien  
-   • Gêneros: Fantasia, Aventura  
-   • Páginas: 464  
-   • Capítulos:  
+###   6.1 Modele um livro que possui:
+   -[x] título,  
+   -[x] autor,  
+   -[x] até dois gêneros literários,  
+   -[x] número total de páginas,  
+   -[ ] títulos de cada capítulo e as páginas onde cada capítulo começa. 
+### 6.2 Regras
+   -[ ] Assuma que o livro pode ter, no máximo, 30 capítulos.
+   -[ ] A lista de possíveis gêneros literários é: Fantasia, Aventura, Romance, Mistério, Terror, Auto-ajuda e Pedagógico.  
+   -[ ] Inclua todos os atributos e métodos necessários para representar o livro (getter e setter). 
+   -[ ] O livro também deve ter métodos para o usuário ler páginas do livro, bem como descobrir quantas
+   páginas do livro já foram lidas e qual é o capítulo atual de leitura.
+
+  ### 6.3 Na aplicação principal (App.java), teste sua classe da seguinte forma:  
+   -[x] (a) Crie um livro com as seguintes características:  
+      • Título: O Senhor dos Anéis - A Sociedade do Anel  
+      • Autor: J. R. R. Tolkien  
+      • Gêneros: Fantasia, Aventura  
+      • Páginas: 464  
+      • Capítulos: 
+
    Capítulo Nome Página  
    1 Uma Festa Muito Esperada 1  
    2 A Sombra do Passado 23  
@@ -137,9 +144,9 @@ reais.
    19 O Espelho de Galadriel 383  
    20 Adeus a Lórien 403  
    21 O Grande Rio 423  
-   22 A Partida da Sociedade 446  
-   (b) Leia 90 páginas do livro  
-   (c) Imprima na tela o capítulo que está lendo. É ‘Uma Conspiração Desmascarada’?  
-   (d) Leia mais 300 páginas do livro  
-   (e) Imprima na tela o capítulo que está lendo. É ‘O Espelho de Galadriel’?  
-   (f) Leia mais 100 páginas do livro. Isso é possível?  
+   22 A Partida da Sociedade 446
+   -[x] (b) Leia 90 páginas do livro  
+   -[x] (c) Imprima na tela o capítulo que está lendo. É ‘Uma Conspiração Desmascarada’?  
+   -[x] (d) Leia mais 300 páginas do livro  
+   -[x] (e) Imprima na tela o capítulo que está lendo. É ‘O Espelho de Galadriel’?  
+   -[x] (f) Leia mais 100 páginas do livro. Isso é possível? ---> regra limite executada, não é possível  
