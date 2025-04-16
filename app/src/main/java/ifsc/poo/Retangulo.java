@@ -50,7 +50,6 @@ public class Retangulo implements Comparable<Retangulo> {
 
     @Override
     public String toString() {
-
         return  "Para um retângulo com:\n" +
                 "Largura:"+ this.getLargura() + " e altura: " + this.getAltura()
                 +"\nArea: "+ this.getArea() + " e o perímetro é " + this.getPerimetro() + " e sua razão A/P é :" + this.getRazaoAreaSobrePerimetro(this) + "\n";

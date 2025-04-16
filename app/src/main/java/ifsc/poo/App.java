@@ -7,7 +7,7 @@ import java.util.Vector;
 public class App {
 
     public static void main(String[] args){
-
+        //Item 1 Lampada
         System.out.println("\n");
         //item 1.3(a) - Readme.md - criar duas instâncias de Lampada
         Lampada led = new Lampada();
@@ -19,11 +19,13 @@ public class App {
         System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
         System.out.println("====================================================================");
 
+        //Item 2 Pessoa
         //Item 2.3(a) - Readme.md. Criar duas pessoas, nessas condições
         Pessoa alice = new Pessoa("Alice", 22);
         Pessoa bruno = new Pessoa("Bruno", 25);
         System.out.println();
         //Item 2.3(b) - Readme.md. Comemorar 3x felicidades ao Bruno
+        //todo não ficou claro 2.3 b
         bruno.felizAniversario();
         bruno.felizAniversario();
         bruno.felizAniversario();
@@ -39,6 +41,7 @@ public class App {
         System.out.println(bruno.getNome());
         System.out.println("====================================================================");
 
+        //Item 3 Retangulo
         //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
         Retangulo quadrilatero = new Retangulo(5,4);
         //Item 3.3(b) - Readme.me - comprova que 5x4 tem área 20 e perimetro 18
@@ -59,24 +62,25 @@ public class App {
         //for(Retangulo a : vetRet){System.out.println(a);}
         System.out.println("====================================================================");
 
-
-        //Item 4.3 - Readme.md - Relógio
+        //Item 4 Relogio
+        //Item 4.3 - Readme.md
         Relogio casio = new Relogio();
         //Item 4.3(a) - Readme.md - ajustar para 14:58:32
         casio.ajustaHora((byte) 14,(byte) 58,(byte) 32);
         //Item 4.3(b) - Readme.md - avançar 2 min
         casio.avancaMinuto();
         casio.avancaMinuto();
-        System.out.println(casio.getHora());
+        System.out.println("Após 2 min adicionados são : " + casio.getHora());
         //Item 4.3(c) - Readme.me - alterar para 23:59:59
         casio.ajustaHora((byte) 23,(byte) 59,(byte) 59);
         //Item 4.3(e) - Readme.me - Demonstração da Resolução para os formatos XXpm XXm XXs
         System.out.println(casio.getHora12(true));
         //Item 4.3(d) - Readme.me - avançar um segundo de 23:59:59
         casio.avancaSegundo();
-        System.out.println(casio.getHora());
+        System.out.println("Após 1 seg adicionados são : " + casio.getHora()+ " ou : " + casio.getHora12(true));
         System.out.println("====================================================================");
 
+        //Item 5 Produto
         //Item 5.3(a) - Readme.md - Criar 2 produtos
         Produto produto1 = new Produto();
         produto1.setNome("geladeira");
@@ -86,12 +90,13 @@ public class App {
         produto1.setDesconto(6);
         produto2.setDesconto(12);
         //Item 5.3(c) - Readme.md - Saída com o valor dos descontos;
-        System.out.println(produto1.getPreco()-(produto1.getPreco()*produto1.getDesconto()/100.00f));
-        System.out.println(produto2.getPreco()-(produto2.getPreco()*produto2.getDesconto()/100.00f));
+        System.out.println("Desconto produto1 + 6% :"  + (produto1.getPreco()-(produto1.getPreco()*produto1.getDesconto()/100.00f)));
+        System.out.println("Desconto produto2 + 12%:" + (produto2.getPreco()-(produto2.getPreco()*produto2.getDesconto()/100.00f)));
         //Item 5.3(d) - Readme.md - Saída com o valor dos descontos por um Método anuncio();
         System.out.println(produto1.anuncio());//tenho dúvidas de boa conduta nesse método, deveria ser feito no App ou no Produto?
         System.out.println("====================================================================");
 
+        //Item 6 Livro
         //Item 6.3(a) - Readme.md - Instanciar um Livro;
         String  tituloESubTitulo = "O Senhor dos Anéis - A Sociedade do Anel",
                 autor = "J. R. R. Tolkien";
@@ -111,8 +116,8 @@ public class App {
         System.out.println("====================================================================");
 
     }
-
-    //faz a leitura e localiza em qual capítulo se encontra
+    //todo médodos auxiliares como static e de mensagens no App.java
+    //Método auxiliares para classe Livro, faz a leitura e localiza em qual capítulo se encontra
     public static  void lerPaginas(int paginas, Livro livro){
         for(int i = 1 ; i <= paginas ; i++){
             if(!livro.avancarPagina()){

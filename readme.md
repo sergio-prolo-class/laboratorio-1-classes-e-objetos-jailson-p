@@ -1,7 +1,8 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/L04k_9nU)
 # Jailson Pedro 
 # Dúvidas:
--[ ] diretório .github, pra que serve e se é estritamente necessário  
+-[x] diretório .github, pra que serve e se é estritamente necessário
+- Resposta do Prof. Sergio: Sim, é pertinenten à estatística e dados educacionais do Github
 
 # Exercícios de Laboratório  
 ## 1. Lâmpada  
@@ -148,5 +149,5 @@ reais.
    -[x] (b) Leia 90 páginas do livro  
    -[x] (c) Imprima na tela o capítulo que está lendo. É ‘Uma Conspiração Desmascarada’?  
    -[x] (d) Leia mais 300 páginas do livro  
-   -[x] (e) Imprima na tela o capítulo que está lendo. É ‘O Espelho de Galadriel’?  
+   -[x] (e) Imprima na tela o capítulo que está lendo. É ‘O Espelho de Galadriel’?  ---->vide em Produto.java linha 42
    -[x] (f) Leia mais 100 páginas do livro. Isso é possível? ---> regra limite executada, não é possível  

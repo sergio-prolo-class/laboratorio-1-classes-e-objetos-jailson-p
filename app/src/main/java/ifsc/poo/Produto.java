@@ -33,6 +33,7 @@ public class Produto {
     public int getDesconto(){return this.desconto;}
 
     //Item 5.3(d) -Readme.me - Criar método (String) anuncio()
+    //todo métodos com mensagens estilizadas na classe, o que diz a convenção?
     public String anuncio(){
         String  nome = StringUtils.capitalize(this.getNome());
         float  precoComDesconto = this.getPreco()-(this.getPreco()*this.getDesconto()/100.00f);

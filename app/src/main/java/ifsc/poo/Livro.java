@@ -85,6 +85,7 @@ public class Livro {
         return false;
     }
     //Mét.Aux. para devolver o capítulo atual da página referida
+    //todo uso do break é em loops para saída imediata caso chegue no objetivo
     private String capituloAtual(int pagina){
         String capituloAtual = "";
         int pagInitcap;
@@ -97,6 +98,7 @@ public class Livro {
         }
         return capituloAtual;
     }
+
     //Adiciona capítulos ao livro instanciado
     public void addCapitulo(String nomeCapitulo, String pagInitCap){
         this.capitulosEpaginas.add(new String[]{nomeCapitulo, pagInitCap});
