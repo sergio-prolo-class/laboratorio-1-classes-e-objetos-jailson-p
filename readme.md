@@ -16,7 +16,11 @@
 ### 1.3 Na aplicação principal (App.java), teste sua classe da seguinte forma:  
 -[x] (a) Crie dois objetos do tipo Lampada  
 -[x] (b) Ligue um e desligue o outro  
--[x] (c) Imprima na tela o estado de cada uma  
+-[x] (c) Imprima na tela o estado de cada uma
+### 1.4 Tasks Update 
+- Altere a classe de forma tal que:  
+  -[x] Lâmpadas possam ser criadas com seu estado definido ou com um estado padrão desligado  
+  -[x] Conte o número total de lâmpadas criadas
   
 ## 2. Pessoa  
 - Modele uma pessoa que possui nome. idade. e pode fazer aniversário . Inclua:  
@@ -38,7 +42,15 @@
 -[x] (e) Você consegue ajustar o nome do Bruno para uma String vazia? Isso faz sentido?  
   -[x] regra para nome setNome com string vazia quando já existe um nome preenchido
   -[ ] regra para nome vazio na geração da instância, uma solução para isto
-    -seria try-cath para intervir na tentativa de gerar esse erro, isso serve também para a idade no momento de gerar a instância.  
+    -seria try-cath para intervir na tentativa de gerar esse erro, isso serve também para a idade no momento de gerar a instância.
+### 2.4 Task Update
+  - Altere a classe de forma tal que:  
+  -[x] Pessoas tenham um CPF no formato “xxx.xxx.xxx-xx” constante a ser informado na criação.  
+    #### Importante:  
+    -[x] Se o CPF informado for vazio, atribua um valor padrão (“123.456.789-00”).  
+    -[x] Se o informado não for vazio, assuma que ele está certo (não implemente uma validação de CPF na classe Pessoa, pessoas não validam CPFs)  
+    -[x] Pessoas possam ser criadas de três maneiras diferentes: apenas CPF, CPF e nome, ou com os três argumentos
+
 ## 3. Retângulo   
 - Modele um retângulo em plano cartesiano bidimensional, que possua formas de calcular sua
 área e perímetro. Inclua:  
@@ -55,7 +67,12 @@
 - [x] (a) Crie um retângulo com 5 de largura e 4 de altura  
 - [x] (b) Sua área é 20? Seu perímetro é 18?  
 - [x] (c) Crie um vetor de 10 retângulos gerados aleatoriamente  
-- [x] (d) Imprima a maior razão área sobre perímetro da lista  
+- [x] (d) Imprima a maior razão área sobre perímetro da lista
+### Tasks Update
+- Altere a classe de forma tal que:  
+  -[x] Nenhum retângulo possa ser criado sem largura e altura definida. Se valores não positivos forem informados, devem ser iniciados com 1  
+  -[ ] Exista um registro do retângulo de maior área já criado  
+  -[ ] Exista um registro do retângulo de menor perímetro já criado
 
 ## 4. Relógio  
 - Modele um relógio que apresenta os valores de hora, minuto e segundo (formato HH:MM:SS). Inclua:  
@@ -70,13 +87,19 @@
 - [x] (void) avancaHora()  
 - [x] (void) avancaMinuto()  
 - [x] (void) avancaSegundo()  
+
 ### 4.3 Na aplicação principal (App.java), teste sua classe da seguinte forma:
 - [x] (a) Crie um relógio que marca 14:58:32  
 - [x] (b) Avance dois minutos. Qual valor ele marca agora? --> 15:0:32   
 - [x] (c) Altere o relógio para marcar 23:59:59  
 - [x] (d) Avance um segundo. Qual valor ele marca agora? --> 00:00:00  
 - [x] (e) Como eu poderia mudar o formato da marcação de horas? Por exemplo, se eu quiser que o relógio mostre ‘11pm 30m 45s’ ao invés de ‘23:30:45’. Qual(ais) mudança(s) deveria(m) ser feita(s) na classe Relogio?   
-   * criei um método para resolver esse impasse com recursão do getHora() para getHora12(bolean h12)
+   * criei um método para resolver esse impasse com recursão do getHora() para getHora12(bolean h12)  
+  ### Tasks Updates
+- Altere a classe de forma tal que:
+     -[] Relógios possam ser criados com valores de hora, hora e minuto, ou hora minuto e segundo. Caso qualquer valor seja inválido, o objeto deve ser inicializado com valores zerados
+     -[] Exista um método que sincronize um relógio com outro  
+     -[] Exista um método que retorne a diferença, em segundos, das horas de um relógio para outro  
 ## 5. Produto  
    Modele um produto que possui nome, preço e uma taxa de desconto. Inclua:
 ### 5.1 Atributos:  

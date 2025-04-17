@@ -3,12 +3,16 @@ package ifsc.poo;
 public class Lampada {
     //Iten 1.1 variável boolean
     private boolean lampada ;
-
-    //construtor
-    public Lampada(){this.lampada = false;}
-    //construtor com argumento
+    private static int quantidadeLampadas;
+    //Item 1.4 - Readme.md - construtor com estado inicial fixo
+    public Lampada(){
+        this.lampada = false;
+        quantidadeLampadas++;
+    }
+    //Item 1.4 - Readme.md - construtor com argumento
     public Lampada(boolean novoEstado){
         this.lampada = novoEstado;
+        quantidadeLampadas++;
     }
 
     //Item 1.2 - Readme.md. Método que permite manter o estado "ligado" da lâmpada

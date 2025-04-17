@@ -5,14 +5,24 @@ public class Pessoa {
     //Item 2.1 - Readme.md
     private String nome ;
     private int idade ;
+    private final String cpf;
 
-    //construtor
-    public Pessoa(String nome, int idade) {
+    //construtor completo
+    public Pessoa(String cpf, String nome, int idade) {
         setNome(nome);
         setIdade(idade);
+        if(cpf == null){this.cpf = "123.456.789-00";}
+        else{this.cpf = cpf;}
+    }
+    public Pessoa(String cpf){
+        this(cpf," ",0);
+    }
+    public Pessoa(String cpf, String nome){
+        this(cpf," ",0);
     }
 
-    //Item 2.2 - Readme.mdc
+
+    //Item 2.2 - Readme.mdc /todo mudar para bolean
     public void setNome(String nome) {
         if(!nome.isEmpty()) this.nome = nome;
         else System.out.println("Nome do " + this.nome +" não pode estar vazio para alteração e continua o mesmo.");
@@ -23,7 +33,7 @@ public class Pessoa {
         return this.nome;
     }
 
-    //Item 2.2 - Readme.md - configurador da idade
+    //Item 2.2 - Readme.md - configurador da idade /todo mudar para bolean
     public void setIdade(int idade) {
         if (idade < 0) {
             System.out.println("Ajustar a idade de " + idade + " é incoerente para " + this.nome + " continuando com: " + this.getIdade() + " anos.");
