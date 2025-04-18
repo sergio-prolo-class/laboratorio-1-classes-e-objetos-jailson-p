@@ -8,21 +8,22 @@ public class App {
 
     public static void main(String[] args){
         //Item 1 Lampada
-        System.out.println("\n");
+        System.out.println();
         //item 1.3(a) - Readme.md - criar duas instâncias de Lampada
-        Lampada led = new Lampada();
-        Lampada alogenica = new Lampada();
+        Lampada led = new Lampada(false);
+        Lampada alogenica = new Lampada(false);
         //itens 1.3(b)e(c) - Readme.md - ligar uma instância e desligar a outra e imprimir o estado
         led.ligar();
         System.out.println("Lampada de led está : " + ((led.verEstado())? "Ligada":"Desligada"));
         alogenica.desligar();
         System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
+        System.out.println("Foram criada(s) " + Lampada.getQuantidadeLampadas() + " lâmpada(s).");
         System.out.println("====================================================================");
 
         //Item 2 Pessoa
         //Item 2.3(a) - Readme.md. Criar duas pessoas, nessas condições
-        Pessoa alice = new Pessoa("Alice", 22);
-        Pessoa bruno = new Pessoa("Bruno", 25);
+        Pessoa alice = new Pessoa("", "Alice", 22);
+        Pessoa bruno = new Pessoa("124.897.666-77", "Bruno",25);
         System.out.println();
         //Item 2.3(b) - Readme.md. Comemorar 3x felicidades ao Bruno
         //todo não ficou claro 2.3 b

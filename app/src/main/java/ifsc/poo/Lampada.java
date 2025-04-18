@@ -29,4 +29,8 @@ public class Lampada {
     public boolean verEstado(){
         return this.lampada;
     }
+
+    //Item 1.4 - Readme.me - Retorno de quantas lampadas foram instanciadas
+    public static int getQuantidadeLampadas(){return quantidadeLampadas;}
+
 }

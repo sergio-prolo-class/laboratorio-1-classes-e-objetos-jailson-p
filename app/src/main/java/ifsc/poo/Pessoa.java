@@ -7,25 +7,29 @@ public class Pessoa {
     private int idade ;
     private final String cpf;
 
-    //construtor completo
+    //construtores
+    public Pessoa(String cpf){
+        this(cpf,"",0);
+    }
+    public Pessoa(String cpf, String nome){
+        this(cpf,"",0);
+    }
     public Pessoa(String cpf, String nome, int idade) {
         setNome(nome);
         setIdade(idade);
         if(cpf == null){this.cpf = "123.456.789-00";}
         else{this.cpf = cpf;}
     }
-    public Pessoa(String cpf){
-        this(cpf," ",0);
-    }
-    public Pessoa(String cpf, String nome){
-        this(cpf," ",0);
-    }
 
-
-    //Item 2.2 - Readme.mdc /todo mudar para bolean
-    public void setNome(String nome) {
-        if(!nome.isEmpty()) this.nome = nome;
-        else System.out.println("Nome do " + this.nome +" não pode estar vazio para alteração e continua o mesmo.");
+    //Item 2.2 - Readme.md - mudei para boolean para que quem chamou resolva o retorno false
+    public boolean setNome(String nome) {
+        if(nome.isEmpty() && !this.nome.isEmpty()){
+            return false;
+        } else if (nome.isEmpty() && this.nome.isEmpty()) {
+            this.nome = "____";
+        }
+        this.nome = nome;
+        return true;
     }
 
     //Item 2.2 - Readme.md - fornecedor do nome
@@ -33,13 +37,13 @@ public class Pessoa {
         return this.nome;
     }
 
-    //Item 2.2 - Readme.md - configurador da idade /todo mudar para bolean
-    public void setIdade(int idade) {
+    //Item 2.2 - Readme.md - mudei para boolean para que quem chamou resolva o retorno false
+    public boolean setIdade(int idade) {
         if (idade < 0) {
-            System.out.println("Ajustar a idade de " + idade + " é incoerente para " + this.nome + " continuando com: " + this.getIdade() + " anos.");
-            return;
+            return false;
         }
         this.idade = idade;
+        return true;
     }
 
     //Item 2.2 - Readme.md - fornecedor da idade
@@ -47,9 +51,17 @@ public class Pessoa {
         return this.idade;
     }
 
+    public String getCpf(){return this.cpf;}
+
+    public void addIdade(){
+        this.idade++;
+        felizAniversario();
+    }
+
     //Item 2.2 - Readme.md
-    //todo perguntar sobre esse tipo de método na classe, é coerente ou impoertinente?
-    public void felizAniversario(){System.out.println(this);}
+    public void felizAniversario(){
+        System.out.println(this.nome + ", feliz aniversário!");
+    }
     @Override
-    public String toString() {return this.nome + ", feliz aniversário! " ;}
+    public String toString() {return "Nome: " + this.nome+"\t\tIdade: " + this.idade + "\t\tCPF: " + this.cpf;}
 }

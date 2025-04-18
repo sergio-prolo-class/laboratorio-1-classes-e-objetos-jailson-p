@@ -41,8 +41,9 @@
   -[x] regra adicionada 'idade < 0' deve ser recusada
 -[x] (e) Você consegue ajustar o nome do Bruno para uma String vazia? Isso faz sentido?  
   -[x] regra para nome setNome com string vazia quando já existe um nome preenchido
-  -[ ] regra para nome vazio na geração da instância, uma solução para isto
+  -[x] regra para nome vazio na geração da instância, uma solução para isto
     -seria try-cath para intervir na tentativa de gerar esse erro, isso serve também para a idade no momento de gerar a instância.
+    -Iniciei a String nome com "____" 
 ### 2.4 Task Update
   - Altere a classe de forma tal que:  
   -[x] Pessoas tenham um CPF no formato “xxx.xxx.xxx-xx” constante a ser informado na criação.  
