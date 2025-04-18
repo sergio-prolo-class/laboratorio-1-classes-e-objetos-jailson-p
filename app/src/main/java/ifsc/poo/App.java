@@ -18,7 +18,7 @@ public class App {
         alogenica.desligar();
         System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
         System.out.println("Foram criada(s) " + Lampada.getQuantidadeLampadas() + " lâmpada(s).");
-        System.out.println("====================================================================");
+        System.out.println("=".repeat(70));
 
         //Item 2 Pessoa
         //Item 2.3(a) - Readme.md. Criar duas pessoas, nessas condições
@@ -26,95 +26,93 @@ public class App {
         Pessoa bruno = new Pessoa("124.897.666-77", "Bruno",25);
         System.out.println();
         //Item 2.3(b) - Readme.md. Comemorar 3x felicidades ao Bruno
-        //todo não ficou claro 2.3 b
-        bruno.felizAniversario();
-        bruno.felizAniversario();
-        bruno.felizAniversario();
-        System.out.println();
+        bruno.addIdade();
+        bruno.addIdade();
+        bruno.addIdade();
         //Item 2.3(c) - Readme.md. Imprimir a idade das duas pessoas
         System.out.println(alice.getNome() + " tem " + alice.getIdade() + " anos.");
         System.out.println(bruno.getNome() + " tem " + bruno.getIdade() + " anos.\n");
         //Item 2.3(d) - Readme.md. Teste de regra para idade < 0
         alice.setIdade(-44);
-        System.out.println();
+        System.out.println("Após tentar mudar a idade para -44 de Alice\nAlice ainda tem " + alice.getIdade() + " anos");
         //Item 2.3(e) - Readme.md Teste set de nome vazio
         bruno.setNome("");
-        System.out.println(bruno.getNome());
-        System.out.println("====================================================================");
+        System.out.println("Após tentar mudar nome de Bruno para String(\"\")\nBruno ficou com nome: " + bruno.getNome());
+        System.out.println(bruno.toString() + alice +"=".repeat(70));
 
-        //Item 3 Retangulo
-        //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
-        Retangulo quadrilatero = new Retangulo(5,4);
-        //Item 3.3(b) - Readme.me - comprova que 5x4 tem área 20 e perimetro 18
-        System.out.println(quadrilatero);
-        //Item 3.3(c) - Readme.md - criar um vetor com 10 'Retangulo's aleatórios
-        Vector<Retangulo> vetRet = new Vector<>();
-        for (int i = 0; i < 10; i++) {
-            Random rand = new Random();
-            float largura = rand.nextFloat(1,20);
-            float altura  = rand.nextFloat(1,20);
-            vetRet.add(new Retangulo(largura, altura));
-        }
-        //Item 3.3(d) - Readme.md - Imprimir a maior razão A/P deste vetor,,,, nessa eu me superei
-        //abaixo, usa o método compareTo que este usa a razao A/P como parâmetro para re-organizar as posições crescentes no Vector
-        Collections.sort(vetRet);
-        //ultimo vector é o de maior razão
-        System.out.println(vetRet.get(vetRet.capacity()-1));
-        //for(Retangulo a : vetRet){System.out.println(a);}
-        System.out.println("====================================================================");
-
-        //Item 4 Relogio
-        //Item 4.3 - Readme.md
-        Relogio casio = new Relogio();
-        //Item 4.3(a) - Readme.md - ajustar para 14:58:32
-        casio.ajustaHora((byte) 14,(byte) 58,(byte) 32);
-        //Item 4.3(b) - Readme.md - avançar 2 min
-        casio.avancaMinuto();
-        casio.avancaMinuto();
-        System.out.println("Após 2 min adicionados são : " + casio.getHora());
-        //Item 4.3(c) - Readme.me - alterar para 23:59:59
-        casio.ajustaHora((byte) 23,(byte) 59,(byte) 59);
-        //Item 4.3(e) - Readme.me - Demonstração da Resolução para os formatos XXpm XXm XXs
-        System.out.println(casio.getHora12(true));
-        //Item 4.3(d) - Readme.me - avançar um segundo de 23:59:59
-        casio.avancaSegundo();
-        System.out.println("Após 1 seg adicionados são : " + casio.getHora()+ " ou : " + casio.getHora12(true));
-        System.out.println("====================================================================");
-
-        //Item 5 Produto
-        //Item 5.3(a) - Readme.md - Criar 2 produtos
-        Produto produto1 = new Produto();
-        produto1.setNome("geladeira");
-        produto1.setPreco(832);
-        Produto produto2 = new Produto("micro-ondas", 499);
-        //Item 5.3(b) - Readme.md - set desconto 6 e 12 respectivamente
-        produto1.setDesconto(6);
-        produto2.setDesconto(12);
-        //Item 5.3(c) - Readme.md - Saída com o valor dos descontos;
-        System.out.println("Desconto produto1 + 6% :"  + (produto1.getPreco()-(produto1.getPreco()*produto1.getDesconto()/100.00f)));
-        System.out.println("Desconto produto2 + 12%:" + (produto2.getPreco()-(produto2.getPreco()*produto2.getDesconto()/100.00f)));
-        //Item 5.3(d) - Readme.md - Saída com o valor dos descontos por um Método anuncio();
-        System.out.println(produto1.anuncio());//tenho dúvidas de boa conduta nesse método, deveria ser feito no App ou no Produto?
-        System.out.println("====================================================================");
-
-        //Item 6 Livro
-        //Item 6.3(a) - Readme.md - Instanciar um Livro;
-        String  tituloESubTitulo = "O Senhor dos Anéis - A Sociedade do Anel",
-                autor = "J. R. R. Tolkien";
-        //constroí Livro myPrecious
-        Livro myPrecious = new Livro(tituloESubTitulo,autor, Livro.Generos.Fantasia,Livro.Generos.Aventura, 464);
-
-        //Adiciona os capítulos
-        App.addCapLivro(myPrecious);
-
-        App.lerPaginas(0,myPrecious);
-        //Ler silenciosamente até a pag 90
-        App.lerPaginas(90,myPrecious);
-        //Ler silenciosamente da pag 90 à 390, avançando 300 pags.
-        App.lerPaginas(300,myPrecious);
-        //Testando o limite de leitura
-        App.lerPaginas(100,myPrecious);
-        System.out.println("====================================================================");
+//        //Item 3 Retangulo
+//        //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
+//        Retangulo quadrilatero = new Retangulo(5,4);
+//        //Item 3.3(b) - Readme.me - comprova que 5x4 tem área 20 e perimetro 18
+//        System.out.println(quadrilatero);
+//        //Item 3.3(c) - Readme.md - criar um vetor com 10 'Retangulo's aleatórios
+//        Vector<Retangulo> vetRet = new Vector<>();
+//        for (int i = 0; i < 10; i++) {
+//            Random rand = new Random();
+//            float largura = rand.nextFloat(1,20);
+//            float altura  = rand.nextFloat(1,20);
+//            vetRet.add(new Retangulo(largura, altura));
+//        }
+//        //Item 3.3(d) - Readme.md - Imprimir a maior razão A/P deste vetor,,,, nessa eu me superei
+//        //abaixo, usa o método compareTo que este usa a razao A/P como parâmetro para re-organizar as posições crescentes no Vector
+//        Collections.sort(vetRet);
+//        //ultimo vector é o de maior razão
+//        System.out.println(vetRet.get(vetRet.capacity()-1));
+//        //for(Retangulo a : vetRet){System.out.println(a);}
+//        System.out.println("====================================================================");
+//
+//        //Item 4 Relogio
+//        //Item 4.3 - Readme.md
+//        Relogio casio = new Relogio();
+//        //Item 4.3(a) - Readme.md - ajustar para 14:58:32
+//        casio.ajustaHora((byte) 14,(byte) 58,(byte) 32);
+//        //Item 4.3(b) - Readme.md - avançar 2 min
+//        casio.avancaMinuto();
+//        casio.avancaMinuto();
+//        System.out.println("Após 2 min adicionados são : " + casio.getHora());
+//        //Item 4.3(c) - Readme.me - alterar para 23:59:59
+//        casio.ajustaHora((byte) 23,(byte) 59,(byte) 59);
+//        //Item 4.3(e) - Readme.me - Demonstração da Resolução para os formatos XXpm XXm XXs
+//        System.out.println(casio.getHora12(true));
+//        //Item 4.3(d) - Readme.me - avançar um segundo de 23:59:59
+//        casio.avancaSegundo();
+//        System.out.println("Após 1 seg adicionados são : " + casio.getHora()+ " ou : " + casio.getHora12(true));
+//        System.out.println("====================================================================");
+//
+//        //Item 5 Produto
+//        //Item 5.3(a) - Readme.md - Criar 2 produtos
+//        Produto produto1 = new Produto();
+//        produto1.setNome("geladeira");
+//        produto1.setPreco(832);
+//        Produto produto2 = new Produto("micro-ondas", 499);
+//        //Item 5.3(b) - Readme.md - set desconto 6 e 12 respectivamente
+//        produto1.setDesconto(6);
+//        produto2.setDesconto(12);
+//        //Item 5.3(c) - Readme.md - Saída com o valor dos descontos;
+//        System.out.println("Desconto produto1 + 6% :"  + (produto1.getPreco()-(produto1.getPreco()*produto1.getDesconto()/100.00f)));
+//        System.out.println("Desconto produto2 + 12%:" + (produto2.getPreco()-(produto2.getPreco()*produto2.getDesconto()/100.00f)));
+//        //Item 5.3(d) - Readme.md - Saída com o valor dos descontos por um Método anuncio();
+//        System.out.println(produto1.anuncio());//tenho dúvidas de boa conduta nesse método, deveria ser feito no App ou no Produto?
+//        System.out.println("====================================================================");
+//
+//        //Item 6 Livro
+//        //Item 6.3(a) - Readme.md - Instanciar um Livro;
+//        String  tituloESubTitulo = "O Senhor dos Anéis - A Sociedade do Anel",
+//                autor = "J. R. R. Tolkien";
+//        //constroí Livro myPrecious
+//        Livro myPrecious = new Livro(tituloESubTitulo,autor, Livro.Generos.Fantasia,Livro.Generos.Aventura, 464);
+//
+//        //Adiciona os capítulos
+//        App.addCapLivro(myPrecious);
+//
+//        App.lerPaginas(0,myPrecious);
+//        //Ler silenciosamente até a pag 90
+//        App.lerPaginas(90,myPrecious);
+//        //Ler silenciosamente da pag 90 à 390, avançando 300 pags.
+//        App.lerPaginas(300,myPrecious);
+//        //Testando o limite de leitura
+//        App.lerPaginas(100,myPrecious);
+//        System.out.println("====================================================================");
 
     }
     //todo médodos auxiliares como static e de mensagens no App.java

@@ -17,19 +17,18 @@ public class Pessoa {
     public Pessoa(String cpf, String nome, int idade) {
         setNome(nome);
         setIdade(idade);
-        if(cpf == null){this.cpf = "123.456.789-00";}
+        if(cpf.isEmpty()){this.cpf = "123.456.789-00";}
         else{this.cpf = cpf;}
     }
 
-    //Item 2.2 - Readme.md - mudei para boolean para que quem chamou resolva o retorno false
-    public boolean setNome(String nome) {
-        if(nome.isEmpty() && !this.nome.isEmpty()){
-            return false;
-        } else if (nome.isEmpty() && this.nome.isEmpty()) {
+    //Item 2.2 - Readme.md -
+    public void setNome(String nome) {
+        if(nome.isEmpty() && this.nome == null) {
             this.nome = "____";
+        return;
         }
-        this.nome = nome;
-        return true;
+         else if (nome.isEmpty() && !this.nome.isEmpty()) {return ;    }
+         this.nome = nome;
     }
 
     //Item 2.2 - Readme.md - fornecedor do nome
@@ -63,5 +62,5 @@ public class Pessoa {
         System.out.println(this.nome + ", feliz aniversário!");
     }
     @Override
-    public String toString() {return "Nome: " + this.nome+"\t\tIdade: " + this.idade + "\t\tCPF: " + this.cpf;}
+    public String toString() {return "Nome: " + this.nome+"\t\tIdade: " + this.idade + "\t\tCPF: " + this.cpf + "\n";}
 }
