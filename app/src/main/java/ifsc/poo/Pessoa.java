@@ -27,8 +27,8 @@ public class Pessoa {
             this.nome = "____";
         return;
         }
-         else if (nome.isEmpty() && !this.nome.isEmpty()) {return ;    }
-         this.nome = nome;
+        else if (nome.isEmpty() && !this.nome.isEmpty()) {return ;    }
+        this.nome = nome;
     }
 
     //Item 2.2 - Readme.md - fornecedor do nome
@@ -58,7 +58,7 @@ public class Pessoa {
     }
 
     //Item 2.2 - Readme.md
-    public void felizAniversario(){
+    private void felizAniversario(){
         System.out.println(this.nome + ", feliz aniversário!");
     }
     @Override

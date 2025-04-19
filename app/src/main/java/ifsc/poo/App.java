@@ -1,65 +1,64 @@
 package ifsc.poo;
 
-import java.util.Collections;
 import java.util.Random;
 import java.util.Vector;
 
 public class App {
 
     public static void main(String[] args){
-        //Item 1 Lampada
-        System.out.println();
-        //item 1.3(a) - Readme.md - criar duas instâncias de Lampada
-        Lampada led = new Lampada(false);
-        Lampada alogenica = new Lampada(false);
-        //itens 1.3(b)e(c) - Readme.md - ligar uma instância e desligar a outra e imprimir o estado
-        led.ligar();
-        System.out.println("Lampada de led está : " + ((led.verEstado())? "Ligada":"Desligada"));
-        alogenica.desligar();
-        System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
-        System.out.println("Foram criada(s) " + Lampada.getQuantidadeLampadas() + " lâmpada(s).");
+//        //Item 1 Lampada
+//        System.out.println();
+//        //item 1.3(a) - Readme.md - criar duas instâncias de Lampada
+//        Lampada led = new Lampada(false);
+//        Lampada alogenica = new Lampada(false);
+//        //itens 1.3(b)e(c) - Readme.md - ligar uma instância e desligar a outra e imprimir o estado
+//        led.ligar();
+//        System.out.println("Lampada de led está : " + ((led.verEstado())? "Ligada":"Desligada"));
+//        alogenica.desligar();
+//        System.out.println("Lampada Alogênica está: " + ((alogenica.verEstado())? "Ligada":"Desligada"));
+//        System.out.println("Foram criada(s) " + Lampada.getQuantidadeLampadas() + " lâmpada(s).");
+//        System.out.println("=".repeat(70));
+//
+//        //Item 2 Pessoa
+//        //Item 2.3(a) - Readme.md. Criar duas pessoas, nessas condições
+//        Pessoa alice = new Pessoa("", "Alice", 22);
+//        Pessoa bruno = new Pessoa("124.897.666-77", "Bruno",25);
+//        System.out.println();
+//        //Item 2.3(b) - Readme.md. Comemorar 3x felicidades ao Bruno
+//        bruno.addIdade();
+//        bruno.addIdade();
+//        bruno.addIdade();
+//        //Item 2.3(c) - Readme.md. Imprimir a idade das duas pessoas
+//        System.out.println(alice.getNome() + " tem " + alice.getIdade() + " anos.");
+//        System.out.println(bruno.getNome() + " tem " + bruno.getIdade() + " anos.\n");
+//        //Item 2.3(d) - Readme.md. Teste de regra para idade < 0
+//        alice.setIdade(-44);
+//        System.out.println("Após tentar mudar a idade para -44 de Alice\nAlice ainda tem " + alice.getIdade() + " anos");
+//        //Item 2.3(e) - Readme.md Teste set de nome vazio
+//        bruno.setNome("");
+//        System.out.println("Após tentar mudar nome de Bruno para String(\"\")\nBruno ficou com nome: " + bruno.getNome());
+//        System.out.println(bruno.toString() + alice +"=".repeat(70));
+
+        //Item 3 Retangulo
+        //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
+        Retangulo quadrilatero = new Retangulo(5,4);
+        //Item 3.3(b) - Readme.me - comprova que 5x4 tem área 20 e perimetro 18
+        System.out.println(quadrilatero);
+        //Item 3.3(c) - Readme.md - criar um vetor com 10 'Retangulo's aleatórios
+        Vector<Retangulo> vetRet = new Vector<>();
+        for (int i = 0; i < 10; i++) {
+            Random rand = new Random();
+            float largura = rand.nextFloat(-20,20);
+            float altura  = rand.nextFloat(-20,20);
+            vetRet.add(new Retangulo(largura, altura));
+            //System.out.println(vetRet.get(i));
+        }
+        //Item 3.3(d) - Readme.md - Imprimir a maior razão A/P deste vetor,,,, nessa eu me superei
+        System.out.println("Retângulo com maior area:" + Retangulo.getMaiorArea());
+        System.out.println("Retângulo com menor perímetro:" + Retangulo.getMenorPerimetro());
+        System.out.println("Retângulo com maior Razao A/P:" + Retangulo.getMaiorAreaPorPerimetro());
         System.out.println("=".repeat(70));
 
-        //Item 2 Pessoa
-        //Item 2.3(a) - Readme.md. Criar duas pessoas, nessas condições
-        Pessoa alice = new Pessoa("", "Alice", 22);
-        Pessoa bruno = new Pessoa("124.897.666-77", "Bruno",25);
-        System.out.println();
-        //Item 2.3(b) - Readme.md. Comemorar 3x felicidades ao Bruno
-        bruno.addIdade();
-        bruno.addIdade();
-        bruno.addIdade();
-        //Item 2.3(c) - Readme.md. Imprimir a idade das duas pessoas
-        System.out.println(alice.getNome() + " tem " + alice.getIdade() + " anos.");
-        System.out.println(bruno.getNome() + " tem " + bruno.getIdade() + " anos.\n");
-        //Item 2.3(d) - Readme.md. Teste de regra para idade < 0
-        alice.setIdade(-44);
-        System.out.println("Após tentar mudar a idade para -44 de Alice\nAlice ainda tem " + alice.getIdade() + " anos");
-        //Item 2.3(e) - Readme.md Teste set de nome vazio
-        bruno.setNome("");
-        System.out.println("Após tentar mudar nome de Bruno para String(\"\")\nBruno ficou com nome: " + bruno.getNome());
-        System.out.println(bruno.toString() + alice +"=".repeat(70));
-
-//        //Item 3 Retangulo
-//        //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
-//        Retangulo quadrilatero = new Retangulo(5,4);
-//        //Item 3.3(b) - Readme.me - comprova que 5x4 tem área 20 e perimetro 18
-//        System.out.println(quadrilatero);
-//        //Item 3.3(c) - Readme.md - criar um vetor com 10 'Retangulo's aleatórios
-//        Vector<Retangulo> vetRet = new Vector<>();
-//        for (int i = 0; i < 10; i++) {
-//            Random rand = new Random();
-//            float largura = rand.nextFloat(1,20);
-//            float altura  = rand.nextFloat(1,20);
-//            vetRet.add(new Retangulo(largura, altura));
-//        }
-//        //Item 3.3(d) - Readme.md - Imprimir a maior razão A/P deste vetor,,,, nessa eu me superei
-//        //abaixo, usa o método compareTo que este usa a razao A/P como parâmetro para re-organizar as posições crescentes no Vector
-//        Collections.sort(vetRet);
-//        //ultimo vector é o de maior razão
-//        System.out.println(vetRet.get(vetRet.capacity()-1));
-//        //for(Retangulo a : vetRet){System.out.println(a);}
-//        System.out.println("====================================================================");
 //
 //        //Item 4 Relogio
 //        //Item 4.3 - Readme.md

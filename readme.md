@@ -69,11 +69,11 @@
 - [x] (b) Sua área é 20? Seu perímetro é 18?  
 - [x] (c) Crie um vetor de 10 retângulos gerados aleatoriamente  
 - [x] (d) Imprima a maior razão área sobre perímetro da lista
-### Tasks Update
+### 4.3 Tasks Update
 - Altere a classe de forma tal que:  
   -[x] Nenhum retângulo possa ser criado sem largura e altura definida. Se valores não positivos forem informados, devem ser iniciados com 1  
-  -[ ] Exista um registro do retângulo de maior área já criado  
-  -[ ] Exista um registro do retângulo de menor perímetro já criado
+  -[x] Exista um registro do retângulo de maior área já criado  
+  -[x] Exista um registro do retângulo de menor perímetro já criado
 
 ## 4. Relógio  
 - Modele um relógio que apresenta os valores de hora, minuto e segundo (formato HH:MM:SS). Inclua:  
