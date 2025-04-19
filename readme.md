@@ -69,7 +69,7 @@
 - [x] (b) Sua área é 20? Seu perímetro é 18?  
 - [x] (c) Crie um vetor de 10 retângulos gerados aleatoriamente  
 - [x] (d) Imprima a maior razão área sobre perímetro da lista
-### 4.3 Tasks Update
+### 3.3 Tasks Update
 - Altere a classe de forma tal que:  
   -[x] Nenhum retângulo possa ser criado sem largura e altura definida. Se valores não positivos forem informados, devem ser iniciados com 1  
   -[x] Exista um registro do retângulo de maior área já criado  
@@ -98,9 +98,9 @@
    * criei um método para resolver esse impasse com recursão do getHora() para getHora12(bolean h12)  
   ### Tasks Updates
 - Altere a classe de forma tal que:
-     -[] Relógios possam ser criados com valores de hora, hora e minuto, ou hora minuto e segundo. Caso qualquer valor seja inválido, o objeto deve ser inicializado com valores zerados
-     -[] Exista um método que sincronize um relógio com outro  
-     -[] Exista um método que retorne a diferença, em segundos, das horas de um relógio para outro  
+     -[x] Relógios possam ser criados com valores de hora, hora e minuto, ou hora minuto e segundo. Caso qualquer valor seja inválido, o objeto deve ser inicializado com valores zerados
+     -[x] Exista um método que sincronize um relógio com outro  
+     -[x] Exista um método que retorne a diferença, em segundos, das horas de um relógio para outro  
 ## 5. Produto  
    Modele um produto que possui nome, preço e uma taxa de desconto. Inclua:
 ### 5.1 Atributos:  

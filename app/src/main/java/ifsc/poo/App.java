@@ -38,46 +38,52 @@ public class App {
 //        bruno.setNome("");
 //        System.out.println("Após tentar mudar nome de Bruno para String(\"\")\nBruno ficou com nome: " + bruno.getNome());
 //        System.out.println(bruno.toString() + alice +"=".repeat(70));
+//
+//        //Item 3 Retangulo
+//        //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
+//        Retangulo quadrilatero = new Retangulo(5,4);
+//        //Item 3.3(b) - Readme.me - comprova que 5x4 tem área 20 e perimetro 18
+//        System.out.println(quadrilatero);
+//        //Item 3.3(c) - Readme.md - criar um vetor com 10 'Retangulo's aleatórios
+//        Vector<Retangulo> vetRet = new Vector<>();
+//        for (int i = 0; i < 10; i++) {
+//            Random rand = new Random();
+//            float largura = rand.nextFloat(-20,20);
+//            float altura  = rand.nextFloat(-20,20);
+//            vetRet.add(new Retangulo(largura, altura));
+//            //System.out.println(vetRet.get(i));
+//        }
+//        //Item 3.3(d) - Readme.md - Imprimir a maior razão A/P deste vetor,,,, nessa eu me superei
+//        System.out.println("Retângulo com maior area:" + Retangulo.getMaiorArea());
+//        System.out.println("Retângulo com menor perímetro:" + Retangulo.getMenorPerimetro());
+//        System.out.println("Retângulo com maior Razao A/P:" + Retangulo.getMaiorAreaPorPerimetro());
+//        System.out.println("=".repeat(70));
 
-        //Item 3 Retangulo
-        //Item 3.3(a) - Readme.me - criar um retângulo com 5 largura e 4 altura
-        Retangulo quadrilatero = new Retangulo(5,4);
-        //Item 3.3(b) - Readme.me - comprova que 5x4 tem área 20 e perimetro 18
-        System.out.println(quadrilatero);
-        //Item 3.3(c) - Readme.md - criar um vetor com 10 'Retangulo's aleatórios
-        Vector<Retangulo> vetRet = new Vector<>();
-        for (int i = 0; i < 10; i++) {
-            Random rand = new Random();
-            float largura = rand.nextFloat(-20,20);
-            float altura  = rand.nextFloat(-20,20);
-            vetRet.add(new Retangulo(largura, altura));
-            //System.out.println(vetRet.get(i));
-        }
-        //Item 3.3(d) - Readme.md - Imprimir a maior razão A/P deste vetor,,,, nessa eu me superei
-        System.out.println("Retângulo com maior area:" + Retangulo.getMaiorArea());
-        System.out.println("Retângulo com menor perímetro:" + Retangulo.getMenorPerimetro());
-        System.out.println("Retângulo com maior Razao A/P:" + Retangulo.getMaiorAreaPorPerimetro());
+        //Item 4 Relogio
+        //Item 4.3 - Readme.md
+        Relogio casio = new Relogio((byte) 127);
+        //Item 4.3(a) - Readme.md - ajustar para 14:58:32
+        casio.ajustaHora((byte) 14,(byte) 58,(byte) 32);
+        //Item 4.3(b) - Readme.md - avançar 2 min
+        casio.avancaMinuto();
+        casio.avancaMinuto();
+        System.out.println("Após 2 min adicionados são : " + casio.getHora());
+        //Item 4.3(c) - Readme.me - alterar para 23:59:59
+        casio.ajustaHora((byte) 23,(byte) 59,(byte) 59);
+        //Item 4.3(e) - Readme.me - Demonstração da Resolução para os formatos XXpm XXm XXs
+        System.out.println(casio.getHora12(true));
+        //Item 4.3(d) - Readme.me - avançar um segundo de 23:59:59
+        casio.avancaSegundo();
+        System.out.println("Após 1 seg adicionados são : " + casio.getHora()+ " ou : " + casio.getHora12(true));
+        Relogio gshock = new Relogio((byte) 10,(byte) 10,(byte) 10);
+        Relogio suico = new Relogio((byte) 5 ,(byte)40,(byte)5);
+        System.out.println(gshock.emSegundos() + "s , Gshock");
+        System.out.println(suico.emSegundos() + "s , Suiço");
+        System.out.println(gshock.diferencaSeg(suico) + "s ,Gshock - Suiço");
         System.out.println("=".repeat(70));
 
-//
-//        //Item 4 Relogio
-//        //Item 4.3 - Readme.md
-//        Relogio casio = new Relogio();
-//        //Item 4.3(a) - Readme.md - ajustar para 14:58:32
-//        casio.ajustaHora((byte) 14,(byte) 58,(byte) 32);
-//        //Item 4.3(b) - Readme.md - avançar 2 min
-//        casio.avancaMinuto();
-//        casio.avancaMinuto();
-//        System.out.println("Após 2 min adicionados são : " + casio.getHora());
-//        //Item 4.3(c) - Readme.me - alterar para 23:59:59
-//        casio.ajustaHora((byte) 23,(byte) 59,(byte) 59);
-//        //Item 4.3(e) - Readme.me - Demonstração da Resolução para os formatos XXpm XXm XXs
-//        System.out.println(casio.getHora12(true));
-//        //Item 4.3(d) - Readme.me - avançar um segundo de 23:59:59
-//        casio.avancaSegundo();
-//        System.out.println("Após 1 seg adicionados são : " + casio.getHora()+ " ou : " + casio.getHora12(true));
-//        System.out.println("====================================================================");
-//
+
+
 //        //Item 5 Produto
 //        //Item 5.3(a) - Readme.md - Criar 2 produtos
 //        Produto produto1 = new Produto();
