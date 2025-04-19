@@ -1,5 +1,7 @@
 package ifsc.poo;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Vector;
 
@@ -61,36 +63,55 @@ public class App {
 
         //Item 4 Relogio
         //Item 4.3 - Readme.md
-        Relogio casio = new Relogio((byte) 127);
-        //Item 4.3(a) - Readme.md - ajustar para 14:58:32
-        casio.ajustaHora((byte) 14,(byte) 58,(byte) 32);
-        //Item 4.3(b) - Readme.md - avançar 2 min
-        casio.avancaMinuto();
-        casio.avancaMinuto();
-        System.out.println("Após 2 min adicionados são : " + casio.getHora());
-        //Item 4.3(c) - Readme.me - alterar para 23:59:59
-        casio.ajustaHora((byte) 23,(byte) 59,(byte) 59);
-        //Item 4.3(e) - Readme.me - Demonstração da Resolução para os formatos XXpm XXm XXs
-        System.out.println(casio.getHora12(true));
-        //Item 4.3(d) - Readme.me - avançar um segundo de 23:59:59
-        casio.avancaSegundo();
-        System.out.println("Após 1 seg adicionados são : " + casio.getHora()+ " ou : " + casio.getHora12(true));
-        Relogio gshock = new Relogio((byte) 10,(byte) 10,(byte) 10);
-        Relogio suico = new Relogio((byte) 5 ,(byte)40,(byte)5);
-        System.out.println(gshock.emSegundos() + "s , Gshock");
-        System.out.println(suico.emSegundos() + "s , Suiço");
-        System.out.println(gshock.diferencaSeg(suico) + "s ,Gshock - Suiço");
-        System.out.println("=".repeat(70));
+//        Relogio casio = new Relogio((byte) 127);
+//        //Item 4.3(a) - Readme.md - ajustar para 14:58:32
+//        casio.ajustaHora((byte) 14,(byte) 58,(byte) 32);
+//        //Item 4.3(b) - Readme.md - avançar 2 min
+//        casio.avancaMinuto();
+//        casio.avancaMinuto();
+//        System.out.println("Após 2 min adicionados são : " + casio.getHora());
+//        //Item 4.3(c) - Readme.me - alterar para 23:59:59
+//        casio.ajustaHora((byte) 23,(byte) 59,(byte) 59);
+//        //Item 4.3(e) - Readme.me - Demonstração da Resolução para os formatos XXpm XXm XXs
+//        System.out.println(casio.getHora12(true));
+//        //Item 4.3(d) - Readme.me - avançar um segundo de 23:59:59
+//        casio.avancaSegundo();
+//        System.out.println("Após 1 seg adicionados são : " + casio.getHora()+ " ou : " + casio.getHora12(true));
+//        Relogio gshock = new Relogio((byte) 10,(byte) 10,(byte) 10);
+//        Relogio suico = new Relogio((byte) 5 ,(byte)40,(byte)5);
+//        System.out.println(gshock.emSegundos() + "s , Gshock");
+//        System.out.println(suico.emSegundos() + "s , Suiço");
+//        System.out.println(gshock.diferencaSeg(suico) + "s ,Gshock - Suiço");
+//        System.out.println("=".repeat(70));
 
+        //Item 5 Produto
+        //Item 5.3(a) - Readme.md - Criar 2 produtos
+        char char0 = (char) 65;
+        char char1 = (char) 65;
+        char char2 = (char) 65;
+          StringBuffer prd = new StringBuffer();
+          prd.append(char2).append(char1).append(char0);
+          int val = 00;
+          int desc= 0;
 
+          for(int i = 1 ; i <= 300; i++){
+            if(char0 == (char) 122){char1++;char0 = (char) 64;}
+            if(char1 == (char) 122){char2++;char1 = (char) 64;}
+            char0++;
+            val++;
+            StringBuffer alpha = new StringBuffer();
+            alpha.append(char2).append(char1).append(char0);
+            Produto produto = new Produto(alpha.toString(),val);
+          }
+          for(String produto: Produto.listaUltimos50()){
+            System.out.println(produto);
+          }
 
-//        //Item 5 Produto
-//        //Item 5.3(a) - Readme.md - Criar 2 produtos
-//        Produto produto1 = new Produto();
-//        produto1.setNome("geladeira");
-//        produto1.setPreco(832);
+//        Produto produto1 = new Produto("geladeira",832);
 //        Produto produto2 = new Produto("micro-ondas", 499);
 //        //Item 5.3(b) - Readme.md - set desconto 6 e 12 respectivamente
+//        System.out.println(produto1.getCodigo());
+//        System.out.println(produto2.getCodigo());
 //        produto1.setDesconto(6);
 //        produto2.setDesconto(12);
 //        //Item 5.3(c) - Readme.md - Saída com o valor dos descontos;
@@ -98,8 +119,8 @@ public class App {
 //        System.out.println("Desconto produto2 + 12%:" + (produto2.getPreco()-(produto2.getPreco()*produto2.getDesconto()/100.00f)));
 //        //Item 5.3(d) - Readme.md - Saída com o valor dos descontos por um Método anuncio();
 //        System.out.println(produto1.anuncio());//tenho dúvidas de boa conduta nesse método, deveria ser feito no App ou no Produto?
-//        System.out.println("====================================================================");
-//
+        System.out.println("=".repeat(70));
+
 //        //Item 6 Livro
 //        //Item 6.3(a) - Readme.md - Instanciar um Livro;
 //        String  tituloESubTitulo = "O Senhor dos Anéis - A Sociedade do Anel",

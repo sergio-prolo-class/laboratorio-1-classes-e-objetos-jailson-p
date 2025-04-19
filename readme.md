@@ -125,6 +125,33 @@ reais.
    retornar um texto no estilo “Geladeira: de R$ 832,00 por APENAS R$ 782,08!"  
 - [x] (e) Você acha que a modelagem desse produto é boa? Se não, onde você mudaria algo, e por
    que? Faça um comentário no seu código fonte incluindo essa resposta.  
+### 5.4 Task Update  
+- Altere a classe de forma tal que:
+-[ ] Produtos só possam ser criados com nome e preço válidos e sempre tenham desconto inicial de 0%  
+-[x] Tenha um registro do número total de produtos criados  
+-[x] Produtos tenham um código identificador do tipo String no formato “CD:xxx-xxx”  
+  -[x] Após definido, o código de um produto não deve ser alterado  
+  -[x] O código é gerado automaticamente a partir do registro de total  
+  -[x] Exemplos: o terceiro produto tem código “CD:000-003”; o milésimo produto tem código  
+  “CD:001-000”.  
+  -[x] É necessário um método para descobrir o código de qualquer produto (getCodigo)  
+-[x] Tenha um registro dos últimos produtos criados.  
+  -[x] Assuma que o sistema pode ter, no máximo, 50 registros.  
+  -[x] Quando novos produtos são criados, o produto mais antigo é esquecido para dar espaço ao mais novo.  
+-[ ] Tenha um método estático para expor o registro de produtos em formato .csv  
+    -[ ] Esse método não deve utilizar System.out ou acesso à arquivos  
+    -[x] Ele deve retornar um vetor de Strings para a aplicação principal imprimir  
+    -[x] A primeira linha deve ser um cabeçalho com os nomes das colunas do .csv  
+    -[x] As próximas linhas devem conter os atributos dos produtos registrados    
+    -[x] Assuma que o .csv é separado por ‘ ; ’ (para não confundir com o decimal dos números)  
+    -[x] Abaixo está um exemplo do conjunto de Strings gerada por esse método  
+```     
+        1 Código;Nome;Preço;Desconto
+        2 CD:000-001;Geladeira;782,08;6
+        3 CD:000-002;Micro-ondas;439,12;12
+        4 CD:000-003;Fogão 4 bocas Eletrolux KL4003;677,00;0
+```
+
 ## 6. Livro  
 ###   6.1 Modele um livro que possui:
    -[x] título,  
@@ -175,3 +202,13 @@ reais.
    -[x] (d) Leia mais 300 páginas do livro  
    -[x] (e) Imprima na tela o capítulo que está lendo. É ‘O Espelho de Galadriel’?  ---->vide em Produto.java linha 42
    -[x] (f) Leia mais 100 páginas do livro. Isso é possível? ---> regra limite executada, não é possível  
+
+## 8. Navio
+   Modele uma classe para representar um navio do jogo batalha naval.
+   Para cada navio é importante saber o seu tamanho, a sua posição (linha e coluna) no tabuleiro,
+   a sua orientação (vertical ou horizontal), a letra que o representa no tabuleiro (e.g. P para
+   porta-aviões), quais posições ele já foi atingido e se ele foi afundado ou não.
+   Pense em quais atributos e métodos podem ser úteis para a classe e implemente-os. Considere
+   que os métodos dessa classe serão invocados por um programa principal que representa o jogo
+   batalha naval. Assim, os métodos devem ser úteis para o jogo, como por exemplo, verificar se o
+   navio foi atingido, se ele foi afundado, etc.
